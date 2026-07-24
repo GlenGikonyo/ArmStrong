@@ -1960,6 +1960,34 @@ body {
     line-height: 1;
     color: var(--primary--color);
 }
+/* OUR CLIENTS SECTION */
+
+.clients-con .client-logo-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    padding: 20px 30px;
+}
+
+.clients-con .client-logo-box img {
+    max-height: 60px;
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease-in-out;
+}
+
+.clients-con .client-logo-box:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.clients-con .owl-carousel .owl-stage {
+    display: flex;
+    align-items: center;
+}
 
 /* ABOUT US SECTION */
 .about-us-con {
