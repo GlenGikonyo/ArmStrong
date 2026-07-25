@@ -2429,9 +2429,12 @@ body {
 }
 
 .sub-outer-wrapper {
-    background-image: url(../images/sub-banner-img.jpg);
+    background-image: 
+        linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.75) 100%),
+        url(../images/warehousing.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 703px;
     margin-top: 30px;
 }
@@ -2608,12 +2611,15 @@ body {
     margin-bottom: 13px;
 }
 
-.our-features-con .feature-box img {
+.our-features-con .feature-box .feature-icon {
+    display: block;
+    font-size: 40px;
+    color: #E30613; /* red, adjust to match your exact brand red */
     margin-bottom: 27px;
     transition: ease-in-out 0.6s;
 }
 
-.our-features-con .feature-box:hover img {
+.our-features-con .feature-box:hover .feature-icon {
     transform: translateY(2px);
 }
 
@@ -2621,7 +2627,6 @@ body {
     font-size: 16px;
     line-height: 23px;
 }
-
 /* MAIN ABOUT US SECTION */
 .main-about-us-con .about-us-content-con .primary_btn:hover {
     background-color: var(--accent--color);
