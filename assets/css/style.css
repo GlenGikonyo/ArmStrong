@@ -2799,3 +2799,97 @@ body {
 .track-your-order-con p.track-your-order-content {
     font-size: 16px;
 }
+
+/* SECURE STORAGE INTRO */
+.storage-intro-con .storage-img img {
+    width: 100%;
+    max-height: 620px;
+    object-fit: cover;
+}
+
+.storage-intro-row {
+    margin-top: 40px;
+}
+
+.storage-content-con p {
+    line-height: 1.7;
+}
+
+.storage-numbered-list {
+    counter-reset: storage-counter;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 35px;
+}
+
+.storage-numbered-list li {
+    counter-increment: storage-counter;
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.storage-numbered-list li::before {
+    content: counter(storage-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--accent--color, #E30613);
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.storage-numbered-list li strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* BUSINESS STORAGE SECTION */
+.business-storage-row {
+    margin-top: 40px;
+}
+
+.check-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.check-list li i {
+    color: var(--accent--color, #E30613);
+    font-size: 20px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+/* QUOTE BANNER */
+.storage-quote-con {
+    padding: 70px 40px;
+}
+
+.storage-quote-con .quote-icon {
+    font-size: 40px;
+    color: var(--yellow--color, #F5B930);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.storage-quote-con h2 {
+    margin-bottom: 15px;
+}
+
+.storage-quote-con p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
