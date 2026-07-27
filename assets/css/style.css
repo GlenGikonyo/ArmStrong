@@ -2724,86 +2724,11 @@ body {
     transform: translateY(2px);
 }
 
-
-/* TRACK YOUR ORDER */
-.track-your-order-con .card {
-    border-radius: 30px;
-    border: none;
-    padding: 55px 70px;
-}
-
-.track-your-order-con .track {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 45px;
-    margin-bottom: 60px;
-    position: relative;
-}
-
-.track-your-order-con .track::before {
-    content: "";
-    position: absolute;
-    top: 16px;
-    left: 0;
-    width: 100%;
-    height: 12px;
-    background: var(--border--color);
-    z-index: 1;
-    border-radius: 30px;
-}
-
-.track-your-order-con .step {
-    text-align: center;
-    width: 25%;
-    position: relative;
-    z-index: 2;
-}
-
-.track-your-order-con .step .icon,
-.track-your-order-con .step i {
-    width: 40px;
-    height: 40px;
-    background: var(--border--color);
-    border-radius: 50%;
-    display: inline-block;
-    position: relative;
-    font-size: 40px;
-    color: var(--accent--color);
-}
-
-
-.track-your-order-con .step.active .icon,
-.track-your-order-con .step.active i {
-    background: var(--secondary--color);
-    color: var(--accent--color);
-}
-
-.track-your-order-con .step .text {
-    display: block;
-    margin-top: 8px;
-    font-size: 18px;
-    color: var(--text--color);
-}
-
-.track-your-order-con .step.active .text {
-    color: var(--accent--color);
-}
-
-.track-your-order-con p.track-your-order-content strong {
-    font-size: 20px;
-    color: var(--black--color);
-    margin-bottom: 10px;
-    display: block;
-}
-
-.track-your-order-con p.track-your-order-content {
-    font-size: 16px;
-}
-
 /* SECURE STORAGE INTRO */
 .storage-intro-con .storage-img img {
     width: 100%;
-    max-height: 620px;
+    height: 100%;
+    max-height: none; 
     object-fit: cover;
 }
 
@@ -2892,4 +2817,65 @@ body {
     margin-left: auto;
     margin-right: auto;
     opacity: 0.9;
+}
+
+/* TRUST STRIP */
+.trust-strip-inner {
+    background-color: var(--grey--color, #f0f0f0);
+    padding: 25px 30px;
+    gap: 15px;
+}
+
+.trust-strip-icon {
+    font-size: 22px;
+    color: var(--accent--color, #E30613);
+    flex-shrink: 0;
+}
+
+.trust-strip-inner p {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* 7 STEPS SECTION */
+.moving-steps-row {
+    margin-top: 40px;
+}
+
+.step-box {
+    padding: 20px 15px 40px;
+}
+
+.step-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: var(--accent--color, #E30613);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: ease-in-out 0.4s;
+}
+
+.step-circle i {
+    font-size: 32px;
+    color: #fff;
+}
+
+.step-box:hover .step-circle {
+    background-color: var(--dark--color, #2b2b2b);
+    transform: translateY(-4px);
+}
+
+.step-box h3 {
+    color: var(--accent--color, #E30613);
+    margin-bottom: 10px;
+}
+
+.step-box p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #6b7280;
 }

@@ -27,12 +27,12 @@ class SiteHeader extends HTMLElement {
                   <a class="nav-link dropdown-toggle p-0" href="#" id="navbarDropdown5" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown5" role="menu">
-                    <a class="dropdown-item" href="faq.html">House Moving Services | Intercounty Relocation Services</a>
-                    <a class="dropdown-item" href="pricing.html">Office Moving | Relocation</a>
-                    <a class="dropdown-item" href="team.html">International Moving and Relocation</a>
-                    <a class="dropdown-item" href="testimonials.html">Records Management</a>
-                    <a class="dropdown-item" href="tracking.html">Affordable Storage Service | Self Storage Nairobi</a>
-                    <a class="dropdown-item" href="404.html">Staff Relocation Services</a>
+                    <a class="dropdown-item" href="houseMoving.html">House Moving Services | Intercounty Relocation Services</a>
+                    <a class="dropdown-item" href="officeMoving.html">Office Moving | Relocation</a>
+                    <a class="dropdown-item" href="internationalMoving.html">International Moving and Relocation</a>
+                    <a class="dropdown-item" href="recordsManagement.html">Records Management</a>
+                    <a class="dropdown-item" href="secureStorage.html">Affordable Storage Service | Self Storage Nairobi</a>
+                    <a class="dropdown-item" href="staffRelocation.html">Staff Relocation Services</a>
                   </div>
                 </li>
                 <li class="nav-item">
