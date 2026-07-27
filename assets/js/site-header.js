@@ -36,10 +36,10 @@ class SiteHeader extends HTMLElement {
                   </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link p-0" href="services.html">Our clients</a>
+                  <a class="nav-link p-0" href="our-clients.html">Our clients</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link p-0" href="services.html">FAQs</a>
+                  <a class="nav-link p-0" href="faq.html">FAQs</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link p-0" href="contact.html">Contact</a>
