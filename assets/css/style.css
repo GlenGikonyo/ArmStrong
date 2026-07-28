@@ -1901,7 +1901,6 @@ body {
   color: var(--accent--color);
 }
 
-.service-con-carousel .services-box:hover .services-upper-content p,
 .service-con-carousel .services-box:hover figure.regular-img {
   display: none;
 }
@@ -2017,7 +2016,7 @@ body {
 }
 
 .about-us-con .about-us-content-con .primary_btn:hover {
-  background-color: var(--secondary--color);
+  background-color: var(--red);
   color: var(--accent--color);
 }
 
@@ -2512,7 +2511,7 @@ body {
   padding-left: 0 !important;
 }
 
-.services-con .col-lg-3 {
+.f-con .col-lg-3 {
   margin-bottom: 40px;
   display: flex;
 }
