@@ -2449,19 +2449,26 @@ body {
 }
 
 .sub-outer-wrapper {
-  background-image: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.6) 0%,
-      rgba(0, 0, 0, 0.75) 100%
-    ),
-    url(../images/warehousing.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 703px;
+  height: 403px;
   margin-top: 30px;
 }
 
+.about-banner {
+  background-image: linear-gradient(180deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.75) 100%),
+    url(../images/newImages/library.jpeg);
+}
+.house-moving-banner {
+  background-image: linear-gradient(180deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.75) 100%),
+    url(../images/newImages/homeKitchen.jpeg);
+}
+.office-moving-banner {
+  background-image: linear-gradient(180deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.75) 100%),
+    url(../images/newImages/officeEquipments.jpeg);
+}
+/* ...one per remaining page, reusing images already in assets/images/newImages/ */
 .sub-banner-con {
   padding-top: 154px;
 }
