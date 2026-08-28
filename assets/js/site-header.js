@@ -59,7 +59,7 @@ class SiteHeader extends HTMLElement {
                 </div>
               </li>
               <li class="d-inline-block">
-                <a href="tracking.html" class="contact-btn d-inline-block">
+                <a href="index.html#get-quote" class="contact-btn d-inline-block">
                   Get a Quote <i class="fa-solid fa-angle-right ml-2"></i>
                 </a>
               </li>
