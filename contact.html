@@ -21,30 +21,40 @@
     <!-- Latest compiled and minified CSS -->
     <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/js/bootstrap.min.js" />
-    <!-- Font Awesome link -->
-    <link
-      rel="stylesheet"
-      href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <!-- StyleSheet link CSS -->
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
-    <link
-      href="assets/css/owl.carousel.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="assets/css/owl.theme.default.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <!-- StyleSheet link CSS -->
-    <link rel="stylesheet" href="assets/css/animate.css" />
-    <link
-      rel="stylesheet"
-      href="../../cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
-    />
+<!-- Bootstrap -->
+<link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet" />
+
+<!-- Font Awesome -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+<!-- Main CSS -->
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+
+<!-- Owl Carousel -->
+<link
+  href="assets/css/owl.carousel.min.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+<link
+  href="assets/css/owl.theme.default.min.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+<!-- Animate -->
+<link rel="stylesheet" href="assets/css/animate.css" />
+
+<!-- Magnific Popup -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
+/>
     <script src="assets/js/site-header.js"></script>
     <script src="assets/js/site-footer.js"></script>
   </head>
@@ -194,8 +204,6 @@
     </div>
     <div class="spacer"></div>
 
-
-
     <!-- GET FREE ESTIMATE SECTION -->
     <div class="padding-rl float-left w-100">
       <section
@@ -282,7 +290,7 @@
                     src="assets/images/newImages/truck.jpeg"
                     alt="free-estimate-img2"
                     class="img-fluid br-30"
-                    style="height: 600px; object-fit: cover; width: 100%;"
+                    style="height: 600px; object-fit: cover; width: 100%"
                   />
                 </figure>
                 <!-- sen us img con -->
@@ -308,7 +316,15 @@
             data-wow-duration="2s"
             data-wow-delay="0.05s"
           >
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7052384862973!2d36.9052580746555!3d-1.3534266357025213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f0d4db7827e0f%3A0xf7fce3d45072a64f!2sModern%20Reliance%20Industries%20Ltd!5e0!3m2!1sen!2ske!4v1785221795616!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7052384862973!2d36.9052580746555!3d-1.3534266357025213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f0d4db7827e0f%3A0xf7fce3d45072a64f!2sModern%20Reliance%20Industries%20Ltd!5e0!3m2!1sen!2ske!4v1785221795616!5m2!1sen!2ske"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
           </div>
           <!-- container -->
         </div>
@@ -339,6 +355,80 @@
     <script src="assets/js/back-to-top-button.js"></script>
     <script src="assets/js/preloader.js"></script>
     <script src="assets/js/counter.js"></script>
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init({
+          publicKey: "fqR7gnw2Fig77q_8_",
+        });
+      })();
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contactpage");
+        const submitButton = document.getElementById("submit");
+
+        if (!form) {
+          console.error("Contact form not found.");
+          return;
+        }
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Get form values
+          const name = document.getElementById("fname").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const phone = document.getElementById("phone").value.trim();
+          const subject = document.getElementById("subject").value.trim();
+
+          const messageField = form.querySelector('textarea[name="Message"]');
+          const message = messageField ? messageField.value.trim() : "";
+
+          // Basic validation
+          if (!name || !email || !phone || !subject || !message) {
+            alert("Please fill in all the fields.");
+            return;
+          }
+
+          // Prevent multiple submissions
+          submitButton.disabled = true;
+          submitButton.innerHTML = "Sending...";
+
+          // Data sent to EmailJS
+          const templateParams = {
+            name: name,
+            email: email,
+            phone: phone,
+            subject: subject,
+            message: message,
+          };
+
+          emailjs
+            .send("service_88nl2dl", "template_ipspl96", templateParams)
+            .then(function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+
+              alert("Your message has been sent successfully!");
+
+              form.reset();
+
+              submitButton.disabled = false;
+              submitButton.innerHTML =
+                'Send Now <i class="fa-solid fa-angle-right ml-3"></i>';
+            })
+            .catch(function (error) {
+              console.error("EmailJS Error:", error);
+
+              alert("Sorry, your message could not be sent. Please try again.");
+
+              submitButton.disabled = false;
+              submitButton.innerHTML =
+                'Send Now <i class="fa-solid fa-angle-right ml-3"></i>';
+            });
+        });
+      });
+    </script>
     <script src="assets/js/contact-form.js"></script>
   </body>
 

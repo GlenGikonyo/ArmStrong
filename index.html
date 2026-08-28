@@ -20,29 +20,39 @@
     <!-- Latest compiled and minified CSS -->
     <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/js/bootstrap.min.js" />
-    <!-- Font Awesome link -->
+    <!-- Bootstrap -->
+    <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
-      href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <!-- StyleSheet link CSS -->
+
+    <!-- Main CSS -->
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+
+    <!-- Owl Carousel -->
     <link
       href="assets/css/owl.carousel.min.css"
       rel="stylesheet"
       type="text/css"
     />
+
     <link
       href="assets/css/owl.theme.default.min.css"
       rel="stylesheet"
       type="text/css"
     />
-    <!-- StyleSheet link CSS -->
+
+    <!-- Animate -->
     <link rel="stylesheet" href="assets/css/animate.css" />
+
+    <!-- Magnific Popup -->
     <link
       rel="stylesheet"
-      href="../../cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
     />
     <script src="assets/js/site-header.js"></script>
     <script src="assets/js/site-footer.js"></script>
@@ -268,7 +278,7 @@
                     src="assets/images/newImages/truck.jpeg"
                     alt="about-us-img"
                     class="img-fluid br-30"
-                    style="height: 600px; object-fit: cover; width: 100%;"
+                    style="height: 600px; object-fit: cover; width: 100%"
                   />
                 </figure>
                 <div class="yellow-box position-absolute br-20">
@@ -752,7 +762,7 @@
                     Detailed Quote
                   </h2>
                 </div>
-                <form class="contact-form" id="contactpage" method="POST">
+                <form class="contact-form" id="contactpage">
                   <ul class="list-unstyled">
                     <li>
                       <select
@@ -829,7 +839,9 @@
                       <span class="d-block radio-question text-white"
                         >Do you need Tv Mounting?</span
                       >
-                      <div class="d-flex align-items-center radio-options text-white">
+                      <div
+                        class="d-flex align-items-center radio-options text-white"
+                      >
                         <label class="d-flex align-items-center">
                           <input type="radio" name="tv_mounting" value="Yes" />
                           Yes
@@ -844,7 +856,9 @@
                       <span class="d-block radio-question text-white"
                         >Do you have DSTV?</span
                       >
-                      <div class="d-flex align-items-center radio-options text-white">
+                      <div
+                        class="d-flex align-items-center radio-options text-white"
+                      >
                         <label class="d-flex align-items-center">
                           <input type="radio" name="dstv" value="Yes" /> Yes
                         </label>
@@ -857,7 +871,9 @@
                       <span class="d-block radio-question text-white"
                         >Storage Needed?</span
                       >
-                      <div class="d-flex align-items-center radio-options text-white">
+                      <div
+                        class="d-flex align-items-center radio-options text-white"
+                      >
                         <label class="d-flex align-items-center me-2">
                           <input
                             type="radio"
@@ -886,7 +902,7 @@
                     </li>
                   </ul>
                   <div class="d-flex align-items-center">
-                    <button id="submit" class="submit-btn">
+                    <button type="submit" id="submit" class="submit-btn">
                       Get Quick Estimate
                       <i class="fa-solid fa-angle-right ml-3"></i>
                     </button>
@@ -1166,8 +1182,30 @@
     <script src="assets/js/back-to-top-button.js"></script>
     <script src="assets/js/preloader.js"></script>
     <script src="assets/js/counter.js"></script>
-    <script src="assets/js/contact-form.js"></script>
-  </body>
+    <!-- <script src="assets/js/contact-form.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      emailjs.init({
+        publicKey: "fqR7gnw2Fig77q_8_",
+      });
+      document
+        .getElementById("contactpage")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
 
-  <!-- Mirrored from html.designingmedia.com/velotrax/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Jul 2026 16:11:23 GMT -->
+          emailjs
+            .sendForm("service_qzvpkr8", "template_k2r042i", this)
+            .then(function () {
+              alert("Your quote request has been sent successfully!");
+
+              document.getElementById("contactpage").reset();
+            })
+            .catch(function (error) {
+              console.error("EmailJS Error:", error);
+
+              alert("Sorry, something went wrong. Please try again.");
+            });
+        });
+    </script>
+  </body>
 </html>
