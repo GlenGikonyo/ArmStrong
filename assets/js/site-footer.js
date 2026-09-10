@@ -2,7 +2,7 @@ class SiteFooter extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `
         <div class="padding-rl float-left w-100">
-          <section class="float-left w-100 footer-con position-relative br-30 padding-rl-responsive bg-accent">
+          <section class="float-left w-100 footer-con position-relative br-5 padding-rl-responsive bg-accent">
             <div class="main-container position-relative">
               <div class="cta-con">
                 <div class="row align-items-center">

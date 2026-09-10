@@ -385,6 +385,14 @@ html {
   border-radius: 20px;
 }
 
+.br-10 {
+  border-radius: 10px;
+}
+
+.br-5 {
+  border-radius: 5px;
+}
+
 .spacer {
   float: left;
   width: 100%;
@@ -429,10 +437,12 @@ body {
 }
 
 .header-con {
-  z-index: 5;
+  z-index: 999; /* bumped from 5 so it stays above content while scrolling */
   padding: 15px 15px 14px 24px;
   background-color: var(--secondary--color);
   margin-top: 30px;
+  position: sticky;
+  top: 0;
 }
 
 .header-con .navbar {
@@ -1495,7 +1505,7 @@ body {
 }
 
 .get-free-estimate-con figure img {
-  border-radius: 30px;
+  border-radius: 5px;
 }
 
 .get-free-estimate-con button figure img {
@@ -1804,6 +1814,7 @@ body {
   width: 100%;
   transition: ease-in-out 0.8s;
   display: flex;
+
 }
 
 .services-box {
@@ -1978,6 +1989,17 @@ body {
 .clients-con .owl-carousel .owl-stage {
   display: flex;
   align-items: center;
+}
+
+.client-feedback-header {
+  margin: 0 auto 20px;
+}
+
+.client-feedback-header h2 {
+  font-size: clamp(32px, 3vw, 52px);
+  line-height: 1.1;
+  color: var(--black--color);
+  margin-bottom: 0;
 }
 
 /* ABOUT US SECTION */
@@ -2181,6 +2203,15 @@ body {
   font-style: normal;
   color: var(--red);
 }
+
+.amp-highlight {
+  display: inline-block;
+  font-size: 0.68em;
+  line-height: 1;
+  font-weight: 800;
+  vertical-align: middle;
+}
+
 .wc-sub {
   margin-top: 20px;
   font-size: 16.5px;

@@ -1,7 +1,7 @@
 class SiteHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <header class="w-100 float-left header-con position-relative main-box br-20">
+      <header class="w-100 header-con main-box br-5">
         <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand" href="index.html">
             <figure class="mb-0">
