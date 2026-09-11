@@ -51,7 +51,7 @@ class SiteFooter extends HTMLElement {
                       <ul class="list-unstyled mb-0 p-0">
                         <li class="text">
                           <span class="footer-info-text">Office Hours:</span>
-                          <a href="mailto:Info@velotrax.com" class="text-decoration-none">Mon - Fri 08:00AM - 05:00PM</a>
+                          <a href="mailto:info@armstrongmovers.co.ke" class="text-decoration-none">Mon - Sun 08:00AM - 05:00PM</a>
                         </li>
                         <li class="text">
                           <span class="footer-info-text">Phone:</span>
@@ -67,7 +67,7 @@ class SiteFooter extends HTMLElement {
                           <span class="footer-info-text d-block">Head Office:</span>
                           <a class="address mb-0" href="https://maps.app.goo.gl/4914bKV6VTJbfvPd7">
                             Reliance Industries, Warehouse 7,<br>
-                            Mombasa Road
+                            Mombasa Road behind Hilton Garden Inn.
                           </a>
                         </li>
                       </ul>

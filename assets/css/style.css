@@ -34,14 +34,17 @@ Project:  Velotrax
 /*------------------------------------------------------------------
 # [Typography]
 
-Body copy: "Inter Tight", sans-serif;
-Heading: "Hedvig Letters Sans", sans-serif;
+Body copy: "Raleway", sans-serif;
+Heading: "Raleway", sans-serif
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&amp;family=Inter+Tight:ital,wght@0,100..900;1,100..900&amp;display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&amp;family=Inter+Tight:ital,wght@0,100..900;1,100..900&amp;display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 body {
-  font-family: "Inter Tight", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
 }
 
 h1,
@@ -50,7 +53,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Hedvig Letters Sans", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 :root {
@@ -68,7 +71,7 @@ h6 {
   --dot--color: #9ca3af; /* Medium Silver/Grey */
   --light--blue--color: #e5e7eb; /* Light Grey Alternative */
   --light--blue--color2: #d1d5db; /* Mid Light Grey */
-  --light--blue--color3: #f9fafb; /* Very Light Off-White/Grey */
+  --light--blue--color3: #dfdbdb; /* Very Light Off-White/Grey */
   --light--blue--color4: #f3f4f6; /* Soft Grey Tint */
 }
 
@@ -126,11 +129,11 @@ figure {
 }
 
 .inter-tight-font {
-  font-family: "Inter Tight", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .hedvig-letters-font {
-  font-family: "Hedvig Letters Sans", sans-serif;
+  font-family: "Raleway", sans-serif
 }
 
 .text-size-100 {
@@ -1251,6 +1254,7 @@ body {
 .sign-up-form .login-card .select-option {
   padding: 0 40px 0 21px;
   -webkit-appearance: none;
+  appearance: none;
   background-repeat: no-repeat !important;
   background-position: 96.5% 24px !important;
   background-image: url("../images/dropdown-arrow.png") !important;
@@ -1633,6 +1637,7 @@ body {
 
 .get-free-estimate-con form select {
   -webkit-appearance: none;
+  appearance: none;
   background-repeat: no-repeat !important;
   background-position: 94.3% 25px !important;
   background-image: url(../images/dropdown-arrow2.png) !important;
@@ -2083,7 +2088,7 @@ body {
 body {
   margin: 0;
   background: var(--bg);
-  font-family: "Inter", sans-serif;
+  font-family: "Raleway", sans-serif;
   color: var(--ink);
 }
 .wc-section {
@@ -2141,7 +2146,7 @@ body {
 }
 .wc-head-badge strong {
   display: block;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 26px;
   font-weight: 700;
   line-height: 1;
@@ -2175,7 +2180,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: "Inter", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 12.5px;
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -2191,7 +2196,7 @@ body {
   display: inline-block;
 }
 .wc-head h2 {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: clamp(34px, 4.4vw, 54px);
   line-height: 1.08;
@@ -2317,7 +2322,7 @@ body {
 }
 
 .wc-tag h3 {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 23px;
   letter-spacing: 0.01em;
@@ -2329,6 +2334,7 @@ body {
   line-height: 1.7;
   color: var(--muted);
   margin: 0;
+  font-weight: 400;
 }
 
 .wc-tag-label {
@@ -2441,7 +2447,7 @@ body {
   margin-bottom: 37px;
 }
 
-.banner-inner-con p::before {
+/* .banner-inner-con p::before {
   content: "";
   position: absolute;
   left: 0;
@@ -2449,7 +2455,7 @@ body {
   width: 53px;
   height: 2px;
   background-color: var(--secondary--color);
-}
+} */
 
 .banner-con .primary_btn {
   margin-right: 18px;

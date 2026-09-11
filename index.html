@@ -85,7 +85,7 @@
                   Efficient Moving & <br />
                   Secure Storage Solutions
                 </h1>
-                <p class="text-white">
+                <p class="text-white" style="padding-left: 0px;">
                   We provide reliable moving and storage services designed to
                   make your relocation <br />
                   stress-free and your belongings safe. From local moves to
@@ -819,13 +819,17 @@
                         id="phone"
                       />
                     </li>
-                   <li>
-                      <input
-                        type="text"
-                        placeholder="Estate"
-                        name="estate"
-                        id="estate"
-                      />
+                    <li>
+                      <select
+                        class="form-control custom-select"
+                        name="house_size"
+                        id="house_size"
+                      >
+                        <option value="">Size of the House</option>
+                        <option value="1 Bedroom">1 Bedroom</option>
+                        <option value="2 Bedrooms">2 Bedrooms</option>
+                        <option value="3 Bedrooms">3 Bedrooms</option>
+                      </select>
                     </li>
                     <li>
                       <input
@@ -841,6 +845,14 @@
                         placeholder="Moving From"
                         name="moving_from"
                         id="moving_from"
+                      />
+                    </li>
+                                        <li>
+                      <input
+                        type="date"
+                        name="moving_date"
+                        id="moving_date"
+                        aria-label="Preferred Moving Date"
                       />
                     </li>
 
