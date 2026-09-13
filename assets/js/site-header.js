@@ -67,6 +67,9 @@ class SiteHeader extends HTMLElement {
           </div>
         </nav>
       </header>
+      <a class="whatsapp-float" href="https://wa.me/254720322873" target="_blank" rel="noopener noreferrer" aria-label="Chat with Armstrong Movers on WhatsApp" title="Chat with us on WhatsApp">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+      </a>
     `;
 
     this.setActiveLink();

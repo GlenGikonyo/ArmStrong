@@ -58,11 +58,39 @@
     <script src="assets/js/site-footer.js"></script>
     <script src="assets/js/side-testimonial.js"></script>
 
+    <!-- Arrow-pointer list markers for the serve lists -->
+    <style>
+      .serve-list {
+        list-style: none !important;
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+      .serve-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 14px;
+        list-style: none !important;
+      }
+      .serve-list li::marker,
+      .serve-list li::before {
+        content: none !important;
+        display: none !important;
+      }
+      .serve-list li:last-child {
+        margin-bottom: 0;
+      }
+      .serve-list li i {
+        color: #e5231b;
+        font-size: 14px;
+        margin-top: 5px;
+        flex: 0 0 auto;
+      }
+    </style>
   </head>
 
   <body>
     <!-- Back to top button -->
-    <a id="button"></a>
 
     <div class="padding-rl float-left w-100">
       <div
@@ -132,25 +160,30 @@
               <h3 class="serve-heading">Who We Serve</h3>
               <ul class="serve-list">
                 <li>
-                  <strong>Home Movers:</strong> Whether you're moving across
+                  <i class="fa-solid fa-angle-right"></i>
+                  <span><strong>Home Movers:</strong> Whether you're moving across
                   town or across the country, we make your house move
-                  seamless and hassle-free.
+                  seamless and hassle-free.</span>
                 </li>
                 <li>
-                  <strong>Corporate Clients:</strong> We specialize in office
-                  relocation, minimizing downtime for your business.
+                  <i class="fa-solid fa-angle-right"></i>
+                  <span><strong>Corporate Clients:</strong> We specialize in office
+                  relocation, minimizing downtime for your business.</span>
                 </li>
                 <li>
-                  <strong>International Clientele:</strong> Trust us for safe
-                  and secure international moving services.
+                  <i class="fa-solid fa-angle-right"></i>
+                  <span><strong>International Clientele:</strong> Trust us for safe
+                  and secure international moving services.</span>
                 </li>
                 <li>
-                  <strong>Students and Individuals:</strong> Affordable and
-                  tailored moving solutions for smaller moves.
+                  <i class="fa-solid fa-angle-right"></i>
+                  <span><strong>Students and Individuals:</strong> Affordable and
+                  tailored moving solutions for smaller moves.</span>
                 </li>
                 <li>
-                  <strong>Storage Clients:</strong> Secure and convenient
-                  storage options for your belongings.
+                  <i class="fa-solid fa-angle-right"></i>
+                  <span><strong>Storage Clients:</strong> Secure and convenient
+                  storage options for your belongings.</span>
                 </li>
               </ul>
             </div>
@@ -160,24 +193,29 @@
               </h3>
               <ul class="serve-list">
                 <li>
-                  <strong>Trusted Expertise:</strong> Over 16 years of
-                  experience in the moving industry.
+                  <i class="fa-solid fa-angle-right"></i>
+                  <span><strong>Trusted Expertise:</strong> Over 16 years of
+                  experience in the moving industry.</span>
                 </li>
                 <li>
-                  <strong>Customer-Centric Approach:</strong> Tailored moving
-                  plans to suit your unique needs.
+                  <i class="fa-solid fa-angle-right"></i>
+                  <span><strong>Customer-Centric Approach:</strong> Tailored moving
+                  plans to suit your unique needs.</span>
                 </li>
                 <li>
-                  <strong>Professional Team:</strong> Skilled packing experts,
-                  carpenters, and movers.
+                  <i class="fa-solid fa-angle-right"></i>
+                  <span><strong>Professional Team:</strong> Skilled packing experts,
+                  carpenters, and movers.</span>
                 </li>
                 <li>
-                  <strong>Affordable Rates:</strong> Competitive pricing
-                  without compromising on quality.
+                  <i class="fa-solid fa-angle-right"></i>
+                  <span><strong>Affordable Rates:</strong> Competitive pricing
+                  without compromising on quality.</span>
                 </li>
                 <li>
-                  <strong>100% Satisfaction Guarantee:</strong> We go above
-                  and beyond to ensure your move is a success.
+                  <i class="fa-solid fa-angle-right"></i>
+                  <span><strong>100% Satisfaction Guarantee:</strong> We go above
+                  and beyond to ensure your move is a success.</span>
                 </li>
               </ul>
             </div>
@@ -672,7 +710,6 @@
     <script src="assets/js/video-section.js"></script>
     <script src="assets/js/jquery-validate.js"></script>
     <script src="assets/js/wow.js"></script>
-    <script src="assets/js/back-to-top-button.js"></script>
     <script src="assets/js/preloader.js"></script>
     <script src="assets/js/counter.js"></script>
     <script src="assets/js/contact-form.js"></script>

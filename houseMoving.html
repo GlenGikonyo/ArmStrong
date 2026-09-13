@@ -46,10 +46,161 @@
 />
     <script src="assets/js/site-header.js"></script>
     <script src="assets/js/site-footer.js"></script>
+
+    <!-- Moving Steps Carousel styles -->
+    <style>
+      .moving-steps-carousel {
+        background: #f2f2f2;
+        width: 100%;
+        padding: 60px 0 70px;
+        position: relative;
+      }
+      .moving-steps-carousel .msc-inner {
+        max-width: 1533px;
+        margin: 0 auto;
+        padding: 0 40px;
+      }
+      .moving-steps-carousel h2.carousel-title {
+        text-align: center;
+        font-weight: 800;
+        font-size: 46px;
+        margin-bottom: 50px;
+        color: #101010;
+      }
+      .msc-track-wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+      .msc-nav-btn {
+        flex: 0 0 auto;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        border: none;
+        background: #ffffff;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: #101010;
+        cursor: pointer;
+        transition: background 0.2s ease, color 0.2s ease;
+        z-index: 2;
+      }
+      .msc-nav-btn:hover {
+        background: #e5231b;
+        color: #fff;
+      }
+      .msc-nav-btn:disabled {
+        opacity: 0.35;
+        cursor: not-allowed;
+        background: #fff;
+        color: #101010;
+      }
+      .msc-dots-line {
+        position: absolute;
+        top: -34px;
+        left: 74px;
+        right: 74px;
+        height: 1px;
+        border-top: 2px dotted #c9c9c9;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .msc-dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #f2f2f2;
+        border: 2px solid #c9c9c9;
+        transform: translateY(-1px);
+        transition: border-color 0.2s ease, background 0.2s ease;
+      }
+      .msc-dot.active {
+        border-color: #e5231b;
+        background: #e5231b;
+      }
+      .msc-viewport {
+        overflow: hidden;
+        width: 100%;
+      }
+      .msc-track {
+        display: flex;
+        transition: transform 0.4s ease;
+      }
+      .msc-slide {
+        flex: 0 0 calc(33.333% - 20px);
+        margin-right: 20px;
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 40px 30px;
+        text-align: center;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      }
+      .msc-icon {
+        width: 56px;
+        height: 56px;
+        margin: 0 auto 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        color: #e5231b;
+      }
+      .msc-slide h3 {
+        font-size: 22px;
+        font-weight: 700;
+        color: #101010;
+        margin-bottom: 14px;
+      }
+      .msc-slide p {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #5c5c5c;
+        margin-bottom: 0;
+      }
+      .msc-cta-wrap {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 30px;
+      }
+      .msc-cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #e5231b;
+        color: #fff;
+        font-weight: 700;
+        padding: 14px 26px;
+        border-radius: 10px;
+        text-decoration: none;
+        box-shadow: 0 6px 16px rgba(229, 35, 27, 0.35);
+        transition: background 0.2s ease;
+      }
+      .msc-cta-btn:hover {
+        background: #b81a12;
+        color: #fff;
+      }
+
+      @media (max-width: 992px) {
+        .msc-slide { flex: 0 0 calc(50% - 20px); }
+      }
+      @media (max-width: 600px) {
+        .moving-steps-carousel { padding: 40px 0 50px; }
+        .moving-steps-carousel .msc-inner { padding: 0 20px; }
+        .moving-steps-carousel h2.carousel-title { font-size: 32px; }
+        .msc-slide { flex: 0 0 100%; }
+        .msc-nav-btn { width: 44px; height: 44px; font-size: 16px; }
+        .msc-dots-line { left: 58px; right: 58px; }
+      }
+    </style>
   </head>
 
   <body>
-    <a id="button"></a>
 
     <div class="padding-rl float-left w-100">
       <div class="float-left w-100 position-relative main-box br-5 sub-outer-wrapper house-moving-banner">
@@ -114,7 +265,7 @@
                   customized approach ensures your relocation is handled with precision and care.
                 </p>
                 <p class="mb-4">
-                  With over <strong>16 years of experience</strong>, Armstrong is one of Kenya's most
+                  With over <strong>18 years of experience</strong>, Armstrong is one of Kenya's most
                   trusted and reliable <strong>moving and storage companies</strong>. Our team of
                   dedicated professionals includes packing experts, carpenters, and media installers,
                   ensuring that your belongings are handled with the utmost care.
@@ -126,12 +277,12 @@
                   in Kenya.
                 </p>
 
-                <h3 class="text-size-26 mb-2">Armstrong Movers, Your Number One Choice Moving in Nairobi</h3>
+                <!-- <h3 class="text-size-26 mb-2">Armstrong Movers, Your Number One Choice Moving in Nairobi</h3>
                 <p class="mb-4">
                   We're here to make your house moving experience as pleasant as we can, using our
                   training and experience. We are guided by our vision that moving can be a relaxing
                   experience when your service providers operate with high integrity and professionalism.
-                </p>
+                </p> -->
 
                 <a href="contact.html" class="text-decoration-none primary_btn d-inline-block">Request a Quote
                   <i class="fa-solid fa-angle-right ml-3"></i>
@@ -184,66 +335,69 @@
 
     <div class="spacer"></div>
 
-    <!-- 7 HOUSE MOVING STEPS SECTION -->
-    <div class="padding-rl float-left w-100">
-      <section class="float-left w-100 position-relative moving-steps-con main-box bg-grey br-5">
-        <div class="main-container">
-          <div class="heading-title-con text-center">
-            <span class="special-text d-block wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.05s">Our Process</span>
-            <h2 class="text-size-66 mb-0 wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.05s">Our Seven House Moving Steps</h2>
+    <!-- 7 HOUSE MOVING STEPS SECTION (Pelichet-style carousel, full-bleed, red theme) -->
+    <div class="float-left w-100">
+      <section class="float-left w-100 position-relative moving-steps-carousel">
+        <div class="msc-inner">
+          <h2 class="carousel-title">Your Move in 7 Steps</h2>
+
+          <div class="msc-track-wrap">
+            <button type="button" class="msc-nav-btn" id="mscPrev" aria-label="Previous steps">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="msc-viewport">
+              <div class="msc-dots-line" id="mscDots"></div>
+
+              <div class="msc-track" id="mscTrack">
+                <div class="msc-slide">
+                  <div class="msc-icon"><i class="fa-solid fa-phone"></i></div>
+                  <h3>1. First Contact</h3>
+                  <p>Call our office. Set a date for our assessor/move coordinator to physically survey your home and prepare an estimate.</p>
+                </div>
+                <div class="msc-slide">
+                  <div class="msc-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                  <h3>2. Assessment Visit</h3>
+                  <p>Our assessment agent will come to your home to estimate the volume of your personal effects, free and without obligation.</p>
+                </div>
+                <div class="msc-slide">
+                  <div class="msc-icon"><i class="fa-solid fa-comments"></i></div>
+                  <h3>3. Consultation</h3>
+                  <p>Our assessor will be fully prepared to discuss personalized packing services with you, assisting every step of your move.</p>
+                </div>
+                <div class="msc-slide">
+                  <div class="msc-icon"><i class="fa-solid fa-file-invoice"></i></div>
+                  <h3>4. Quote</h3>
+                  <p>You receive your free quote without any obligation. Review the quote and book your service after careful review.</p>
+                </div>
+                <div class="msc-slide">
+                  <div class="msc-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                  <h3>5. Pack</h3>
+                  <p>Our packing team arrives one day prior to or on the actual moving day, using the industry's best materials to protect your belongings.</p>
+                </div>
+                <div class="msc-slide">
+                  <div class="msc-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                  <h3>6. Transport</h3>
+                  <p>All our trucks are enclosed and fitted with tracking technology, ensuring secure and direct routes to your final destination.</p>
+                </div>
+                <div class="msc-slide">
+                  <div class="msc-icon"><i class="fa-solid fa-box-open"></i></div>
+                  <h3>7. Unpack</h3>
+                  <p>Our professionals unpack your goods, install appliances and carefully reassemble your furniture as per your direction.</p>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="msc-nav-btn" id="mscNext" aria-label="Next steps">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
           </div>
 
-          <div class="row moving-steps-row text-center">
-            <div class="col-lg-3 col-md-6 col-12 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.05s">
-              <div class="step-box">
-                <div class="step-circle"><i class="fa-solid fa-phone"></i></div>
-                <h3 class="text-size-20">1. First Contact</h3>
-                <p class="mb-0">Call our office. Set a date for our assessor/move coordinator to physically survey your home and prepare an estimate.</p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s">
-              <div class="step-box">
-                <div class="step-circle"><i class="fa-solid fa-calendar-check"></i></div>
-                <h3 class="text-size-20">2. Assessment Visit</h3>
-                <p class="mb-0">Our assessment agent will come to your home to estimate the volume of your personal effects. This visit is free and without any obligation.</p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.15s">
-              <div class="step-box">
-                <div class="step-circle"><i class="fa-solid fa-check"></i></div>
-                <h3 class="text-size-20">3. Consultation</h3>
-                <p class="mb-0">Our assessor will be fully prepared to discuss personalized packing services with you. We are here to assist during every step of your move.</p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
-              <div class="step-box">
-                <div class="step-circle"><i class="fa-solid fa-file-invoice"></i></div>
-                <h3 class="text-size-20">4. Quote</h3>
-                <p class="mb-0">You receive your free quote without any obligation. Review the quote and book your service after careful review.</p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.05s">
-              <div class="step-box">
-                <div class="step-circle"><i class="fa-solid fa-boxes-stacked"></i></div>
-                <h3 class="text-size-20">5. Pack</h3>
-                <p class="mb-0">Our packing team will arrive one day prior to or on the actual moving day and will use the industry's best packing materials to protect your belongings.</p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s">
-              <div class="step-box">
-                <div class="step-circle"><i class="fa-solid fa-truck-fast"></i></div>
-                <h3 class="text-size-20">6. Transport</h3>
-                <p class="mb-0">All our trucks are enclosed and fitted with tracking technology that ensures secure and direct routes are used to deliver your treasured possessions to their final destination.</p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.15s">
-              <div class="step-box">
-                <div class="step-circle"><i class="fa-solid fa-box-open"></i></div>
-                <h3 class="text-size-20">7. Unpack</h3>
-                <p class="mb-0">Our professionals unpack your goods, install appliances and carefully reassemble your furniture. Your furniture will be placed according to your direction.</p>
-              </div>
-            </div>
-          </div>
+          <!-- <div class="msc-cta-wrap">
+            <a href="contact.html" class="msc-cta-btn">
+              <i class="fa-solid fa-file-invoice-dollar"></i> Request a Quote
+            </a>
+          </div> -->
         </div>
       </section>
     </div>
@@ -267,9 +421,90 @@
     <script src="assets/js/video-section.js"></script>
     <script src="assets/js/jquery-validate.js"></script>
     <script src="assets/js/wow.js"></script>
-    <script src="assets/js/back-to-top-button.js"></script>
     <script src="assets/js/preloader.js"></script>
     <script src="assets/js/counter.js"></script>
     <script src="assets/js/contact-form.js"></script>
+
+    <!-- Moving Steps Carousel logic -->
+    <script>
+      (function () {
+        function initMovingStepsCarousel() {
+          var track = document.getElementById('mscTrack');
+          var prevBtn = document.getElementById('mscPrev');
+          var nextBtn = document.getElementById('mscNext');
+          var dotsWrap = document.getElementById('mscDots');
+          if (!track || !prevBtn || !nextBtn || !dotsWrap) return;
+
+          var slides = Array.prototype.slice.call(track.children);
+          var perView = getPerView();
+          var pageCount = Math.max(1, Math.ceil(slides.length / perView));
+          var currentPage = 0;
+
+          function getPerView() {
+            var w = window.innerWidth;
+            if (w <= 600) return 1;
+            if (w <= 992) return 2;
+            return 3;
+          }
+
+          function buildDots() {
+            dotsWrap.innerHTML = '';
+            for (var i = 0; i < pageCount; i++) {
+              var dot = document.createElement('span');
+              dot.className = 'msc-dot' + (i === currentPage ? ' active' : '');
+              dotsWrap.appendChild(dot);
+            }
+          }
+
+          function update() {
+            var slideWidth = slides[0].getBoundingClientRect().width + 20; // include margin
+            var offset = currentPage * perView * slideWidth;
+            track.style.transform = 'translateX(-' + offset + 'px)';
+
+            var dots = dotsWrap.children;
+            for (var i = 0; i < dots.length; i++) {
+              dots[i].classList.toggle('active', i === currentPage);
+            }
+
+            prevBtn.disabled = currentPage === 0;
+            nextBtn.disabled = currentPage === pageCount - 1;
+          }
+
+          prevBtn.addEventListener('click', function () {
+            if (currentPage > 0) {
+              currentPage--;
+              update();
+            }
+          });
+
+          nextBtn.addEventListener('click', function () {
+            if (currentPage < pageCount - 1) {
+              currentPage++;
+              update();
+            }
+          });
+
+          window.addEventListener('resize', function () {
+            var newPerView = getPerView();
+            if (newPerView !== perView) {
+              perView = newPerView;
+              pageCount = Math.max(1, Math.ceil(slides.length / perView));
+              currentPage = Math.min(currentPage, pageCount - 1);
+              buildDots();
+            }
+            update();
+          });
+
+          buildDots();
+          update();
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initMovingStepsCarousel);
+        } else {
+          initMovingStepsCarousel();
+        }
+      })();
+    </script>
   </body>
 </html>
