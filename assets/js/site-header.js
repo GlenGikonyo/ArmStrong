@@ -53,7 +53,7 @@ class SiteHeader extends HTMLElement {
                   <img src="assets/images/call-icon.png" alt="call-icon" class="img-fluid d-inline-block">
                 </figure>
                 <div>
-                  <a href="tel:+568925896325" class="text-decoration-none cell-no">
+                  <a href="tel:+254 720 322 873" class="text-decoration-none cell-no">
                     <span class="number d-inline-block urbanist-font">+254 720 322 873</span>
                   </a>
                 </div>
@@ -67,7 +67,7 @@ class SiteHeader extends HTMLElement {
           </div>
         </nav>
       </header>
-      <a class="whatsapp-float" href="https://wa.me/254720322873" target="_blank" rel="noopener noreferrer" aria-label="Chat with Armstrong Movers on WhatsApp" title="Chat with us on WhatsApp">
+      <a class="whatsapp-float" href="https://wa.me/254728098375" target="_blank" rel="noopener noreferrer" aria-label="Chat with Armstrong Movers on WhatsApp" title="Chat with us on WhatsApp">
         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
       </a>
     `;

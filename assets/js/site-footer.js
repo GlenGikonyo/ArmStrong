@@ -56,6 +56,7 @@ class SiteFooter extends HTMLElement {
                         <li class="text">
                           <span class="footer-info-text">Phone:</span>
                           <a href="tel:+254 720 322 873" class="text-decoration-none">+254 720 322 873</a>
+                          <a href="tel:+254 728 098 375" class="text-decoration-none">+254 728 098 375</a>
                         </li>
                       </ul>
                     </div>
