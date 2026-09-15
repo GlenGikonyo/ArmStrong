@@ -340,9 +340,9 @@ html {
   padding-bottom: 140px !important;
 }
 
-.heading-title-con {
+/* .heading-title-con {
   margin-bottom: 50px;
-}
+} */
 
 .font-weight-600 {
   font-weight: 600;
@@ -2203,6 +2203,7 @@ body {
   line-height: 1.65;
   color: var(--muted);
   max-width: 560px;
+  font-weight: 500;
 }
 
 /* ---------- Route ---------- */
@@ -2846,7 +2847,7 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: var(--accent--color, #e30613);
+  background-color: #e30613;
   color: #fff;
   font-weight: 700;
   font-size: 14px;
@@ -2870,15 +2871,22 @@ body {
   align-items: center;
   margin-bottom: 16px;
   font-size: 16px;
+  position: relative;
+  padding-left: 30px; /* Adjust spacing for the square */
 }
 
 .check-list li i {
-  color: var(--accent--color, #e30613);
-  font-size: 20px;
-  margin-right: 12px;
-  flex-shrink: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background-color: var(--primary--color); /* Red color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px; /* Square shape */
 }
-
 /* QUOTE BANNER */
 .storage-quote-con {
   padding: 70px 40px;
@@ -3098,9 +3106,9 @@ body {
 }
 
 /* CASE STUDY */
-.case-study-con {
+/* .case-study-con {
   padding: 70px 0;
-}
+} */
 
 .case-study-con .case-eyebrow {
   display: block;
@@ -3210,3 +3218,35 @@ body {
   .contact-info-con .contact-info-box:hover .contact-icon {
     transform: translateY(2px);
   }
+
+  /* Make the background span the full width */
+.full-width-bg {
+  background-color: var(--grey--bg--color); /* Adjust background color if needed */
+}
+
+/* Add padding around the content */
+.content-padding {
+  padding: 40px 20px; /* Adjust padding as needed */
+}
+  
+/* Ensure padding is applied to the wording in the checklist section */
+.business-storage-con .main-container {
+  padding: 40px 20px !important; /* Add padding around the content */
+}
+
+.business-storage-con p,
+.business-storage-con ul {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+/* Add padding around the wording for the office moving section */
+.office-service-con .main-container {
+  padding: 40px 20px !important; /* Add padding around the content */
+}
+
+.office-service-con p,
+.office-service-con ul {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
