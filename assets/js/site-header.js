@@ -1,7 +1,7 @@
 class SiteHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <header class="w-100 header-con main-box br-5">
+      <header class="w-100 header-con main-box br-1">
         <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand" href="index.html">
             <figure class="mb-0">
@@ -72,7 +72,25 @@ class SiteHeader extends HTMLElement {
       </a>
     `;
 
+    this.headerElement = this.querySelector('.header-con');
+    this.handleScroll = () => {
+      this.headerElement.classList.toggle('is-sticky', window.scrollY > 0);
+    };
+    this.updateReservedHeight = () => {
+      const styles = window.getComputedStyle(this.headerElement);
+      const marginTop = parseFloat(styles.marginTop) || 0;
+      this.style.height = `${this.headerElement.offsetHeight + marginTop}px`;
+    };
+
+    this.updateReservedHeight();
+    window.addEventListener('scroll', this.handleScroll, { passive: true });
+    window.addEventListener('resize', this.updateReservedHeight);
     this.setActiveLink();
+  }
+
+  disconnectedCallback() {
+    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('resize', this.updateReservedHeight);
   }
 
   setActiveLink() {

@@ -396,6 +396,10 @@ html {
   border-radius: 5px;
 }
 
+.br-1 {
+  border-radius: 1px;
+}
+
 .spacer {
   float: left;
   width: 100%;
@@ -419,6 +423,10 @@ body {
 /* Home Page */
 
 /* HEADER SECTION */
+site-header {
+  display: block;
+}
+
 .header-con .navbar-light .navbar-nav .nav-link {
   font-size: 16px;
   color: var(--black--color);
@@ -440,12 +448,20 @@ body {
 }
 
 .header-con {
-  z-index: 999; /* bumped from 5 so it stays above content while scrolling */
+  z-index: 999;
   padding: 15px 15px 14px 24px;
   background-color: var(--secondary--color);
   margin-top: 30px;
-  position: sticky;
+  position: relative;
+}
+
+.header-con.is-sticky {
+  position: fixed;
   top: 0;
+  left: 50%;
+  width: min(1533px, calc(100% - 60px));
+  margin-top: 0;
+  transform: translateX(-50%);
 }
 
 .header-con .navbar {
@@ -2377,12 +2393,12 @@ body {
     url(../images/armStrong.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 1001px;
+  height: 500px;
   /* margin-top: 30px; */
 }
 
 .banner-con {
-  padding-top: 305px;
+  padding-top: 180px;
 }
 
 .banner-con .text-size-100 {
