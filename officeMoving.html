@@ -270,7 +270,7 @@
     <div class="float-left w-100">
       <section class="float-left w-100 position-relative moving-steps-carousel">
         <div class="msc-inner">
-          <h2 class="carousel-title">7 steps of moving</h2>
+          <h2 class="carousel-title">The steps in your transfer</h2>
 
           <div class="msc-track-wrap">
             <button
@@ -287,76 +287,106 @@
 
               <div class="msc-track" id="mscTrack">
                 <div class="msc-slide">
-                  <div class="msc-icon"><i class="fa-solid fa-phone"></i></div>
-                  <h3>1. First Contact</h3>
+                  <div class="msc-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                  <h3>First Contact</h3>
                   <p>
-                    Call our office. Set a date for our assessor/move
-                    coordinator to physically survey your home and prepare an
-                    estimate.
+                    Following your request for a quote, a dedicated
+                    technician will get back to your team as soon as
+                    possible for an initial telephone call.
                   </p>
                 </div>
                 <div class="msc-slide">
                   <div class="msc-icon">
                     <i class="fa-solid fa-calendar-check"></i>
                   </div>
-                  <h3>2. Assessment Visit</h3>
+                  <h3>Technical Survey</h3>
                   <p>
-                    Our assessment agent will come to your home to estimate the
-                    volume of your personal effects, free and without
-                    obligation.
+                    Our professionals visit your production site and talk
+                    to the people in charge of the transfer to ensure the
+                    best possible coordination, covering volume, equipment
+                    and more.
                   </p>
                 </div>
                 <div class="msc-slide">
                   <div class="msc-icon">
-                    <i class="fa-solid fa-comments"></i>
+                    <i class="fa-solid fa-file-signature"></i>
                   </div>
-                  <h3>3. Consultation</h3>
+                  <h3>Quote</h3>
                   <p>
-                    Our assessor will be fully prepared to discuss personalized
-                    packing services with you, assisting every step of your
-                    move.
+                    An expert will analyse your requirements and offer a
+                    tailor-made solution, taking into account your
+                    deadlines and the impact of the transfer on your
+                    production.
                   </p>
                 </div>
                 <div class="msc-slide">
                   <div class="msc-icon">
-                    <i class="fa-solid fa-file-invoice"></i>
+                    <i class="fa-solid fa-shield-halved"></i>
                   </div>
-                  <h3>4. Quote</h3>
+                  <h3>Insurance</h3>
                   <p>
-                    You receive your free quote without any obligation. Review
-                    the quote and book your service after careful review.
+                    Armstrong Movers will offer all-risk insurance tailored
+                    to your industry and needs. A technical project manager
+                    supervises the transfer to ensure strict compliance
+                    with quality standards.
                   </p>
                 </div>
                 <div class="msc-slide">
                   <div class="msc-icon">
-                    <i class="fa-solid fa-boxes-stacked"></i>
+                    <i class="fa-solid fa-file-circle-check"></i>
                   </div>
-                  <h3>5. Pack</h3>
+                  <h3>Customs</h3>
                   <p>
-                    Our packing team arrives one day prior to or on the actual
-                    moving day, using the industry's best materials to protect
-                    your belongings.
+                    Armstrong Movers will take care of all customs and
+                    administrative requirements before the transfer.
+                  </p>
+                </div>
+                <div class="msc-slide">
+                  <div class="msc-icon">
+                    <i class="fa-solid fa-box"></i>
+                  </div>
+                  <h3>Packaging</h3>
+                  <p>
+                    Desks and machines are packaged according to their
+                    specific needs, using eco-friendly, protective
+                    materials. Our IT teams will take care of disconnecting
+                    your computer system, in collaboration with your
+                    technical teams.
+                  </p>
+                </div>
+                <div class="msc-slide">
+                  <div class="msc-icon">
+                    <i class="fa-solid fa-dolly"></i>
+                  </div>
+                  <h3>Moving Machinery</h3>
+                  <p>
+                    Our heavy handling teams use high-tech equipment
+                    (forklift trucks, lifting cranes, pianoplans, etc.) and
+                    secure solutions to protect delicate, sensitive
+                    equipment. All your surfaces will also be protected
+                    during handling.
                   </p>
                 </div>
                 <div class="msc-slide">
                   <div class="msc-icon">
                     <i class="fa-solid fa-truck-fast"></i>
                   </div>
-                  <h3>6. Transport</h3>
+                  <h3>Transport</h3>
                   <p>
-                    All our trucks are enclosed and fitted with tracking
-                    technology, ensuring secure and direct routes to your final
-                    destination.
+                    The project manager will monitor every stage of the
+                    transport process and provide you with a detailed
+                    report on each service.
                   </p>
                 </div>
                 <div class="msc-slide">
                   <div class="msc-icon">
                     <i class="fa-solid fa-box-open"></i>
                   </div>
-                  <h3>7. Unpack</h3>
+                  <h3>Unpacking</h3>
                   <p>
-                    Our professionals unpack your goods, install appliances and
-                    carefully reassemble your furniture as per your direction.
+                    Our professionals will take care of relocating your
+                    offices to suit the new layout. Our IT teams will
+                    reconnect all your digital devices.
                   </p>
                 </div>
               </div>
@@ -405,6 +435,22 @@
     <script src="assets/js/preloader.js"></script>
     <script src="assets/js/counter.js"></script>
     <script src="assets/js/contact-form.js"></script>
+
+    <style>
+      /* Red icon accents for the transfer steps carousel (overrides orange) */
+      .moving-steps-carousel .msc-icon i {
+        color: #d32f2f;
+      }
+      .moving-steps-carousel .msc-dot.active {
+        background-color: #d32f2f;
+        border-color: #d32f2f;
+      }
+      .moving-steps-carousel .msc-nav-btn:hover {
+        color: #d32f2f;
+        border-color: #d32f2f;
+      }
+    </style>
+
     <script>
       (function () {
         function initMovingStepsCarousel() {
