@@ -1937,7 +1937,7 @@
     }
 
     .compaign_countdown ul {
-        float: left;
+        /* float: left; */
         width: 100%;
         min-width: 100%;
         display: inline-block;
