@@ -7,6 +7,20 @@ $(function () {
         preloader: false,
         fixedContentPos: false
     });
+
+    $('.recommendation-document').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true
+        },
+        image: {
+            titleSrc: 'alt'
+        },
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false
+    });
 });
 
 // $(function () {

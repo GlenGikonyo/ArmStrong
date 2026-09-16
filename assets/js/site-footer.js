@@ -19,7 +19,7 @@ class SiteFooter extends HTMLElement {
                         relocation stress-free and your belongings safe. From local moves to long-term
                         storage, we ensure a seamless experience tailored to your needs.
                       </p>
-                      <a href="contact.html" class="text-decoration-none primary_btn d-inline-block">
+                      <a href="index.html#get-quote" class="text-decoration-none primary_btn d-inline-block">
                         Get a Quote <i class="fa-solid fa-angle-right ml-3"></i>
                       </a>
                     </div>

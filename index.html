@@ -1212,8 +1212,25 @@
         .addEventListener("submit", function (event) {
           event.preventDefault();
 
+          const form = this;
+          const requiredFields = form.querySelectorAll(
+            "select, input:not([type='radio']), textarea"
+          );
+          const hasEmptyField = Array.from(requiredFields).some(
+            (field) => !field.value.trim()
+          );
+          const requiredRadioGroups = ["tv_mounting", "dstv", "storage_needed"];
+          const hasUnselectedRadio = requiredRadioGroups.some(
+            (name) => !form.querySelector(`input[name="${name}"]:checked`)
+          );
+
+          if (hasEmptyField || hasUnselectedRadio) {
+            alert("Please fill in all the fields before requesting an estimate.");
+            return;
+          }
+
           emailjs
-            .sendForm("service_qzvpkr8", "template_k2r042i", this)
+            .sendForm("service_qzvpkr8", "template_k2r042i", form)
             .then(function () {
               alert("Your quote request has been sent successfully!");
 
