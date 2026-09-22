@@ -2888,7 +2888,7 @@ body {
 .check-list li i {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 6px;
   width: 16px;
   height: 16px;
   background-color: var(--primary--color); /* Red color */
@@ -3359,7 +3359,7 @@ body {
   flex: 0 0 calc(33.333% - 20px);
   margin-right: 20px;
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 5px;
   padding: 40px 30px;
   text-align: center;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
