@@ -199,7 +199,7 @@ figure {
 }
 
 p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 30px;
   font-weight: 400;
   color: var(--text--color);
@@ -2880,7 +2880,7 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 16px;
-  font-size: 16px;
+  font-size: 14px;
   position: relative;
   padding-left: 30px; /* Adjust spacing for the square */
 }
