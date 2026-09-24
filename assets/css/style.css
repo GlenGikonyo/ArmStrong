@@ -199,7 +199,7 @@ figure {
 }
 
 p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 30px;
   font-weight: 400;
   color: var(--text--color);
@@ -1326,9 +1326,19 @@ site-header {
 
 .faq-con .accordion-card {
   width: 100%;
-  border-radius: 0;
+  /* border-radius: 0; */
   background-color: transparent;
-  border-top: 2px solid var(--light--blue--color3);
+  position: relative;
+}
+
+.faq-con .accordion-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 36px;
+  width: 1100px;
+  max-width: calc(100% - 72px);
+  border-top: 1px solid rgba(18, 33, 61, 0.35);
 }
 
 .faq-con .accordian-inner .card-header {
@@ -2880,7 +2890,7 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 16px;
-  font-size: 14px;
+  font-size: 16px;
   position: relative;
   padding-left: 30px; /* Adjust spacing for the square */
 }
@@ -3359,7 +3369,7 @@ body {
   flex: 0 0 calc(33.333% - 20px);
   margin-right: 20px;
   background: #ffffff;
-  border-radius: 5px;
+  border-radius: 16px;
   padding: 40px 30px;
   text-align: center;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
