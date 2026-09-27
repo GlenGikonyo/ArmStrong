@@ -3447,3 +3447,54 @@ body {
     right: 58px;
   }
 }
+
+.clients-intro-con .serve-heading,
+.business-storage-con .serve-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--black--color);
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--border--color2);
+  text-align: center;
+}
+
+.clients-intro-con .serve-list,
+.business-storage-con .serve-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 40px;
+}
+
+.clients-intro-con .serve-list li,
+.business-storage-con .serve-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 18px;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--text--color);
+}
+
+.clients-intro-con .serve-list li::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary--color);
+}
+
+.clients-intro-con .serve-list li strong,
+.business-storage-con .serve-list li strong {
+  color: var(--black--color);
+  font-weight: 700;
+}
+
+.clients-intro-con .serve-list li i,
+.business-storage-con .serve-list li i {
+  color: var(--primary--color);
+  margin-right: 8px;
+}
