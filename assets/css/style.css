@@ -2404,8 +2404,9 @@ body {
     url(../images/armStrong.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;
-  /* margin-top: 30px; */
+  height: auto;          /* was: height: 500px */
+  min-height: 500px;
+  padding-bottom: 60px;
 }
 
 .banner-con {
@@ -2480,7 +2481,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 403px;
+  height: auto;          /* was: height: 403px */
+  min-height: 403px;
+  padding-bottom: 60px;
   margin-top: 30px;
 }
 
@@ -3497,4 +3500,60 @@ body {
 .business-storage-con .serve-list li i {
   color: var(--primary--color);
   margin-right: 8px;
+}
+
+/* QUOTE FORM: tidy radios + stop the tall image from stretching the section */
+.contact-form ul li input[type="radio"] {
+  width: auto;
+  height: auto;
+  margin: 0 8px 0 0;
+  padding: 0;
+  accent-color: var(--primary--color);
+  cursor: pointer;
+}
+
+.contact-form .radio-group-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-form .radio-question {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.contact-form .radio-options {
+  gap: 28px;
+}
+
+.contact-form .radio-options label {
+  margin: 0;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .get-free-estimate-con .row.align-items-center {
+    align-items: stretch !important;
+  }
+
+  .get-free-estimate-con .send-us-img-con {
+    height: 100%;
+    min-height: 560px;
+  }
+
+  .get-free-estimate-con .send-us-img-con figure.position-relative {
+    height: 100%;
+    margin: 0;
+  }
+
+  .get-free-estimate-con .send-us-img-con figure.position-relative img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 }
