@@ -2040,7 +2040,7 @@ site-header {
 .about-us-con .about-img-con .yellow-box {
   padding: 30px;
   text-align: center;
-  background-color: var(--primary--color);
+  background-color: var(--navy);
   top: 34px;
   left: 34px;
   width: 192px;
@@ -2514,19 +2514,19 @@ body {
 .records-management-banner {
   background-image:
     linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.75) 100%),
-    url(../images/records-management.jpeg);
+    url(../images/records-management.webp);
 }
 
 .secure-storage-banner {
   background-image:
     linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.75) 100%),
-    url(../images/storage-space.jpg);
+    url(../images/storage-space.webp);
 }
 
 .staff-relocation-banner {
   background-image:
     linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.75) 100%),
-    url(../images/office-glass.jpg);
+    url(../images/office-glass.webp);
 }
 
 .our-clients-banner {
@@ -2538,13 +2538,13 @@ body {
 .faqs-banner {
   background-image:
     linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.75) 100%),
-    url(../images/faqs-drawing-blackboard.jpg);
+    url(../images/faqs-drawing-blackboard.webp);
 }
 
 .contact-banner {
   background-image:
     linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.75) 100%),
-    url(../images/phone-desk.jpg);
+    url(../images/phone-desk.webp);
 }
 
 /* ...one per remaining page, reusing images already in assets/images/newImages/ */

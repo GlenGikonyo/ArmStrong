@@ -1,28 +1,20 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
   <head>
-    <title>Home | Armstrong Movers</title>
-    <!-- /SEO Ultimate -->
+    <title>Moving Company in Kenya | Armstrong Movers</title>
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+      name="description"
+      content="Discover professional moving, relocation and storage services in Kenya with Armstrong Movers. Contact our team for assistance with your move."
     />
+    <!-- /SEO Ultimate -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <link
       rel="shortcut icon"
       href="assets/images/letterwordA.jpeg"
       type="image/x-icon"
     />
-
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="../ms-icon-144x144.html" />
-    <meta name="theme-color" content="#ffffff" />
-    <!-- Latest compiled and minified CSS -->
     <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/js/bootstrap.min.js" />
-    <!-- Bootstrap -->
-    <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet" />
-
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -274,7 +266,7 @@
               <div class="about-img-con position-relative">
                 <figure>
                   <img
-                    src="assets/images/armTruck-portrait.png"
+                    src="assets/images/armTruck-portrait.webp"
                     alt="about-us-img"
                     class="img-fluid br-5"
                     style="height: 600px; object-fit: cover; width: 100%"
@@ -282,14 +274,17 @@
                 </figure>
                 <div class="yellow-box position-absolute br-5">
                   <span
-                    class="d-inline-block text-black counter hedvig-letters-font"
-                    >18</span
+                    class="d-inline-block text-white counter hedvig-letters-font"
                   >
+                    18
+                  </span>
                   <sup
-                    class="d-inline-block text-black plus hedvig-letters-font"
-                    >+</sup
+                    class="d-inline-block text-white plus hedvig-letters-font"
                   >
-                  <p class="mb-0 text-black">
+                    +
+                  </sup>
+
+                  <p class="mb-0 text-white">
                     Years of Moving <br />
                     the World
                   </p>
@@ -314,8 +309,8 @@
                   </h2>
                   <p class="">
                     Armstrong was built on a simple promise: to deliver a
-                    reliable, prompt, and affordable moving service tailored
-                    to every client's unique needs.
+                    reliable, prompt, and affordable moving service tailored to
+                    every client's unique needs.
                   </p>
                   <p class="">
                     From home removals and office relocations to staff
@@ -366,7 +361,8 @@
     <!-- SERVICES SECTION -->
     <div class="padding-rl float-left w-100" id="services">
       <section
-        class="float-left w-100 position-relative services-con service-con-carousel padding-top main-box br-5 bg-grey" style="padding-bottom: 50px"
+        class="float-left w-100 position-relative services-con service-con-carousel padding-top main-box br-5 bg-grey"
+        style="padding-bottom: 50px"
       >
         <div class="main-container">
           <div class="heading-title-con text-center">
@@ -409,7 +405,7 @@
                 </div>
                 <figure class="regular-img">
                   <img
-                    src="assets/images/home-moving.jpg"
+                    src="assets/images/home-moving.webp"
                     alt="services-img1"
                     class="img-fluid br-5"
                   />
@@ -417,7 +413,7 @@
                 <div class="hover-content">
                   <figure class="hover-img">
                     <img
-                      src="assets/images/home-moving.jpg"
+                      src="assets/images/home-moving.webp"
                       alt="services-img1-hover"
                       class="img-fluid br-5"
                     />
@@ -485,7 +481,7 @@
                 </div>
                 <figure class="regular-img">
                   <img
-                    src="assets/images/international-moving.jpeg"
+                    src="assets/images/international-moving.webp"
                     alt="services-img3"
                     class="img-fluid br-5"
                   />
@@ -493,7 +489,7 @@
                 <div class="hover-content">
                   <figure class="hover-img">
                     <img
-                      src="assets/images/international-moving.jpeg"
+                      src="assets/images/international-moving.webp"
                       alt="services-img3-hover"
                       class="img-fluid br-5"
                     />
@@ -626,7 +622,8 @@
     <!-- OUR CLIENTS SECTION -->
     <div class="padding-rl float-left w-100">
       <section
-        class="float-left w-100 position-relative clients-con padding-bottom main-box" style="padding-top: 50px;"
+        class="float-left w-100 position-relative clients-con padding-bottom main-box"
+        style="padding-top: 50px"
       >
         <div class="main-container">
           <div class="heading-title-con text-center">
@@ -782,6 +779,7 @@
                         class="form-control custom-select"
                         name="move_type"
                         id="move_type"
+                        required
                       >
                         <option value="">Move Type</option>
                         <option value="Local">Local</option>
@@ -794,6 +792,7 @@
                         class="form-control custom-select"
                         name="moving"
                         id="moving"
+                        required
                       >
                         <option value="">Moving</option>
                         <option value="Home">Home</option>
@@ -806,6 +805,8 @@
                         placeholder="Full Name"
                         name="fname"
                         id="fname"
+                        autocomplete="name"
+                        required
                       />
                     </li>
                     <li>
@@ -814,15 +815,17 @@
                         placeholder="Email Address"
                         name="email"
                         id="email"
+                        autocomplete="email"
                       />
                     </li>
                     <li>
                       <input
-                        type="text"
+                        type="tel"
                         placeholder="Phone Number"
                         name="phone"
                         id="phone"
-                      /> 
+                        autocomplete="tel"
+                      />
                     </li>
                     <li>
                       <select
@@ -841,17 +844,19 @@
                     <li>
                       <input
                         type="text"
-                        placeholder="Moving From(Estate)"
+                        placeholder="Moving From (Estate)"
                         name="moving_from"
                         id="moving_from"
+                        required
                       />
                     </li>
                     <li>
                       <input
                         type="text"
-                        placeholder="Moving To(Estate)"
+                        placeholder="Moving To (Estate)"
                         name="moving_to"
                         id="moving_to"
+                        required
                       />
                     </li>
                     <li>
@@ -1215,43 +1220,67 @@
       emailjs.init({
         publicKey: "fqR7gnw2Fig77q_8_",
       });
+
       document
-        .getElementById("contactpage")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
+  .getElementById("contactpage")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
 
-          const form = this;
-          const requiredFields = form.querySelectorAll(
-            "select, input:not([type='radio']), textarea"
-          );
-          const hasEmptyField = Array.from(requiredFields).some(
-            (field) => !field.value.trim()
-          );
-          const requiredRadioGroups = ["tv_mounting", "dstv", "storage_needed"];
-          const hasUnselectedRadio = requiredRadioGroups.some(
-            (name) => !form.querySelector(`input[name="${name}"]:checked`)
-          );
+    const form = this;
 
-          if (hasEmptyField || hasUnselectedRadio) {
-            alert(
-              "Please fill in all the fields before requesting an estimate."
-            );
-            return;
-          }
+    // Essential fields
+    const requiredFields = [
+      { id: "move_type", label: "Move Type" },
+      { id: "moving", label: "Moving Type" },
+      { id: "fname", label: "Full Name" },
+      { id: "moving_from", label: "Moving From" },
+      { id: "moving_to", label: "Moving To" },
+    ];
 
-          emailjs
-            .sendForm("service_qzvpkr8", "template_k2r042i", form)
-            .then(function () {
-              alert("Your quote request has been sent successfully!");
+    // Check that essential fields are filled in
+    for (const field of requiredFields) {
+      const input = document.getElementById(field.id);
 
-              document.getElementById("contactpage").reset();
-            })
-            .catch(function (error) {
-              console.error("EmailJS Error:", error);
+      if (!input.value.trim()) {
+        alert(`Please enter or select ${field.label}.`);
+        input.focus();
+        return;
+      }
+    }
 
-              alert("Sorry, something went wrong. Please try again.");
-            });
-        });
+    // Require at least one contact method
+    const email = document.getElementById("email");
+    const phone = document.getElementById("phone");
+
+    if (!email.value.trim() && !phone.value.trim()) {
+      alert("Please provide your email address or phone number so we can contact you.");
+      email.focus();
+      return;
+    }
+
+    // Prevent duplicate submissions while sending
+    const submitButton = document.getElementById("submit");
+    const originalButtonText = submitButton.innerHTML;
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+
+    emailjs
+      .sendForm("service_qzvpkr8", "template_k2r042i", form)
+      .then(function () {
+        alert("Your quote request has been sent successfully!");
+        form.reset();
+      })
+      .catch(function (error) {
+        console.error("EmailJS Error:", error);
+        alert("Sorry, your quote request could not be sent. Please try again.");
+      })
+      .finally(function () {
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+      });
+  });
+
     </script>
   </body>
 </html>
